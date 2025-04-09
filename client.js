@@ -9,7 +9,9 @@ const isHelper = args.includes('-h');
 const role = isHelper ? 'helper' : 'test-taker';
 
 // Connect to server
-const SERVER_URL = 'http://localhost:3000'; // For local testing
+//const SERVER_URL = 'http://localhost:3000'; // For local testing
+
+const SERVER_URL = 'https://exam-relay-server.onrender.com';
 const socket = socketIo(SERVER_URL);
 
 // Set up terminal interface
