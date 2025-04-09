@@ -8,10 +8,21 @@ const args = process.argv.slice(2);
 const isHelper = args.includes('-h');
 const role = isHelper ? 'helper' : 'test-taker';
 
-// Connect to server
+// Connect to server : choose only one server
+
 //const SERVER_URL = 'http://localhost:3000'; // For local testing
 
-const SERVER_URL = 'https://exam-relay-server.onrender.com';
+const SERVER_URL = 'https://exam-relay-server.onrender.com';  // server 1
+
+//const SERVER_URL = 'https://exam-relay-server-2.onrender.com'; // server 2
+
+// const SERVER_URL = 'https://exam-relay-server-3.onrender.com'; // server 3
+
+// const SERVER_URL = 'https://exam-relay-server-4.onrender.com'; // server 4
+
+
+
+
 const socket = socketIo(SERVER_URL);
 
 // Set up terminal interface
